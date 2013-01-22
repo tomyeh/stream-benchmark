@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Asap'), local('Asap-Regular'), url(http://themes.googleusercontent.com/static/fonts/asap/v1/SgBaq0dzhSGNMfqm2JX5ng.woff) format('woff');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Asap Bold'), local('Asap-Bold'), url(http://themes.googleusercontent.com/static/fonts/asap/v1/yVILXKVgPzaz72DegpV7Bg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Asap Italic'), local('Asap-Italic'), url(http://themes.googleusercontent.com/static/fonts/asap/v1/MdJnJ_Rxy6GcPmasGZsTfQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Asap Bold Italic'), local('Asap-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/asap/v1/_sVKdO-TLWvaH-ptGimJBT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), url(http://themes.googleusercontent.com/static/fonts/lora/v5/5-AYViExptypIdFoLKAxTA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(http://themes.googleusercontent.com/static/fonts/lora/v5/XpaepWHcooQHSRnzoohUng.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(http://themes.googleusercontent.com/static/fonts/lora/v5/wXeMvRh7Gui36p_I04Ex6g.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/lora/v5/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/HqHm7BVC_nzzTui2lzQTDT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/bH7276GfdCjMjApa_dkG6T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
