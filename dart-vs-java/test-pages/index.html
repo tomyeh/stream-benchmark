@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://docs.rikulo.org/rikulo/latest/Getting_Started/Hello_World.html -->
+<html ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    
+  <meta name="keywords" content="Rikulo, Web, Mobile, Dart, Web framework, Ajax framekwork, Open Source, Apache"> 
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">  
+  <link rel="stylesheet" type="text/css" href="./resources/responsive_960" media="screen"> 
+  <link rel="stylesheet" type="text/css" href="./resources/template"> 
+  <link href="./resources/css" rel="stylesheet" type="text/css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>Hello World | Documentation | Rikulo</title> 
+  <link rel="stylesheet" href="http://rikulo.org/less/docs"> 
+  <script type="text/javascript" src="./resources/jquery-1.6.2.min.js"></script> 
+  <!--[if lt IE 9]>
+		<script src="http://rikulo.org/resource/js/lib/html5.js"></script>
+	<![endif]--> 
+ </head> 
+ <!--[if IE 8]><body id="zbody" class="ie ie8 ie89"><![endif]--> 
+ <!--[if gte IE 9]><body id="zbody" class="ie ie9"><![endif]--> 
+ <!--[if !IE]>-->
+ <body id="zbody" class="safari touch" style="" data-twttr-rendered="true">
+  <!--<![endif]--> 
+  <div id="rikulo-container"> 
+   <div id="index-header" class="container_12 clearfix"> 
+    <h1 id="rikulo-logo" class="grid_3"> <em><a href="http://rikulo.org/" rel="canonical" title="Rikulo Home" name="top"> 
+	<img width="141" src="./resources/rikulo_logo.png" title="Rikulo" alt="Rikulo" class="logo-img">Rikulo</a> </em> </h1> 
+    <div id="main_menu" class="grid_9 clearfix"> 
+     <nav class="navigation_menu"> 
+      <header> 
+       <h5>Navigation Menu</h5> 
+      </header> 
+      <ul class="menu new-style"> 
+       <li class="menuitem "> <a href="http://rikulo.org/examples/" class="menulink">Examples</a> </li> 
+       <li class="menuitem "> <a href="http://rikulo.org/contribute/" class="menulink">Contribute</a> </li> 
+       <li class="menuitem "> <a href="http://rikulo.org/discuss/" class="menulink">Discuss</a> </li> 
+       <li class="menuitem menuitem-sel"> <a href="http://rikulo.org/learn/" class="menulink">Learn</a> </li> 
+       <li class="menuitem "> <a href="http://blog.rikulo.org/" class="menulink">Blog</a> </li> 
+      </ul> 
+     </nav> 
+    </div> 
+   </div> 
+   <div id="rikulo-template"> 
+    <div id="template-inner" class="container_12 clearfix">
+<div id="box" class="doc-page grid_12">
+	<div id="controlbar" class="grid_12 alpha omega clearfix">
+		<div class="control-button"></div>
+	</div>
+	<div id="content" class="grid_9 prefix_3 alpha omega" style="min-height: 392px;">
+
+<h1>Hello World</h1><p>This chapter shows you the basic elements of a Rikulo application by implementing a simple "Hello World" application.</p><p>A Rikulo application consists of</p>
+<ul>
+  <li>At least one Dart file to hold the Dart code of your application</li>
+  <li>At least one HTML page to load the Dart file(s) and, optionally, to define static content</li>
+</ul>
+<blockquote><p>Please refer to <a href="http://docs.rikulo.org/rikulo/latest/Getting_Started/Introduction.html">here</a> for installing Rikulo to your application.</p><p>If you prefer to define the user interfaces in a manner similar to authoring HTML/XML pages, please refer to <a href="http://docs.rikulo.org/rikulo/latest/UXL">Rikulo UXL</a>. It compiles the user interface specified in XML into Dart code.</p>
+</blockquote><h2>The Dart Code</h2><p>Here is a simple "Hello World" application.</p>
+<pre><code>import 'package:rikulo/view.dart';
+
+void main() {
+  new TextView("Hello World!") //create UI
+    .addToDocument(); //make it available to the browser
+}
+</code></pre><p>As shown above, there are basically three steps to implement a Rikulo application.</p>
+<ol>
+  <li>Import the <a href="http://api.rikulo.org/rikulo/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library.</li>
+  <li>Draw your user interface by instantiating UI elements (<a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html"><code>View</code></a> and subclasses).</li>
+  <li>Show your user interface on the browser by invoking <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#addToDocument"><code>View.addToDocument()</code></a>.</li>
+</ol><h3>Import the <a href="http://api.rikulo.org/rikulo/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library</h3><p>Libraries to import depend on your requirement. The <a href="http://api.rikulo.org/rikulo/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library is usually what you will import, since it has many UI elements.</p><h3>Draw your user interface</h3><p>The user interface elements in a Rikulo application are built using views. A view is the basic building block. It draws something on the screen and interact with the user.</p><p>A view is an instance of <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html"><code>View</code></a> and its subclasses. To define the user interface is all about picking up the right views, instantiating them and putting them together.</p><p>For example, we instantiate an instance of <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/TextView.html"><code>TextView</code></a> to show the greeting message in this sample application.</p>
+<pre><code>new TextView("Hello World!");
+</code></pre>
+<blockquote><p><a href="http://api.rikulo.org/rikulo/latest/rikulo_view/TextView.html"><code>TextView</code></a> is a subclass of <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html"><code>View</code></a> for displaying messages.</p>
+</blockquote><p>Views can be arranged in a hierarchy of views, as show below, to define more complex user interface you want. The view at the top is called the root view.</p><p><img src="./resources/view-hierarchy.jpg" alt="Tree of Views"></p><p>For example, we can define the user interface as follows.</p>
+<pre><code>new View()
+  ..layout.type = "linear" //arrange the layout of child views linearly
+  ..addChild(new TextView("Name")) //a label
+  ..addChild(new TextBox()); //an input
+</code></pre><p>As shown above, a hierarchy of views is arranged by use of <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#addChild"><code>View.addChild()</code></a>. Furthermore, <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#layout"><code>View.layout</code></a> controls how to arrange the child views (aka., subviews). For more information, please refer to <a href="http://docs.rikulo.org/rikulo/latest/Views/Fundamentals/UI_Overview.html">the UI Overview</a>.</p><h3>Show your user interface on the browser</h3><p>Notice that the hierarchy of views you create is just a tree of normal objects. To make it available to the browser, you can invoke <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#addToDocument"><code>View.addToDocument()</code></a> against the root view. For example,</p>
+<pre><code>new View()
+  ..layout.type = "linear"
+  ..addChild(new TextView("Name"))
+  ..addChild(new TextBox())
+  ..addToDcument(); //make it available to the browser
+</code></pre><p>On the hand, you can remove a hierarchy of views from the browser by invoking <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#remove"><code>View.remove()</code></a>. If you want to remove a branch, you can invoke <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#remove"><code>View.remove()</code></a>.</p><p>If you want to add the user interface into a particular DOM element (<a href="http://api.dartlang.org/docs/continuous/dart_html/Element.html"><code>Element</code></a>) rather than <code>document.body</code> (which is the default), you can specify the DOM element as the <code>ref</code> argument. For example, assume you want want to put it under a DOM element named <code>part</code>, you can do as follows.</p>
+<pre><code>view.addToDocument(ref: document.query("#part"));
+</code></pre><p>For more information, please refer to <a href="http://docs.rikulo.org/rikulo/latest/Views/Fundamentals/Embed_in_HTML_Page.html">Embed in HTML Page</a>.</p><h3>Handle Events</h3><p>The view will notify the application about the user's interaction with events. You can listen and handle the events with <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#on"><code>View.on</code></a>. For example, we can rewrite the "Hello World" application to change the greeting message when the user clicks the greeting message as follows.</p>
+<pre><code>new TextView("Hello World!")
+  ..on.click.add((event) {
+    (event.target as TextView).text = "Welcome to Rikulo.";
+    event.target.requestLayout();
+  })
+  ..addToDocument();
+</code></pre>
+<blockquote><p>Notice that we invoke <a href="http://api.rikulo.org/rikulo/latest/rikulo_view/View.html#requestLayout"><code>View.requestLayout()</code></a> to reposition the greeting message, since we change its content and need to reposition it. For more information, please refer to <a href="http://docs.rikulo.org/rikulo/latest/Layouts/index.html">the Layouts chapter</a>.</p>
+</blockquote><h2>The HTML page</h2><p>To run an application, you need a HTML page to define the user interface in HTML and specify the Dart file(s) to load. Here is a typical example:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Foo&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+    &lt;link rel="stylesheet" type="text/css" href="packages/rikulo/resource/css/default/view.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script type="application/dart" src="HelloWorld.dart"&gt;&lt;/script&gt;
+    &lt;script src="packages/browser/dart.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>First, you have to specify the CSS file to load. Depending on your requirement, you can specify any files you want, as long as including <code>view.css</code> (or a customized version of it).</p>
+<pre><code>&lt;link rel="stylesheet" type="text/css"
+ href="packages/rikulo/resource/css/default/view.css" /&gt;
+</code></pre>
+<blockquote><p>By default, <a href="http://pub.dartlang.org/doc">the Dart Package Manager</a> installed the resources under the <code>packages/rikulo/resource</code> folder.</p>
+</blockquote><p>Second, you have to specify your Dart file. In this application, it is called <code>HelloWorld.dart</code>.</p>
+<pre><code>&lt;script type="application/dart" src="HelloWorld.dart"&gt;&lt;/script&gt;
+</code></pre><p>Also notice that Rikulo assumes HTML 5, so you shall specify <code>&lt;!DOCTYPE html&gt;</code> at the beginning. In additions, it is, though optional, suggested to specify the <code>viewpoint</code> meta tag as follows, if you want to run the application on mobile devices:</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
+</code></pre>
+<blockquote><p>It is harmless if running on a desktop browser.</p>
+</blockquote><p>Then, you visit this page to see how it works in live.</p></div>
+<div id="toc" class="grid_3 alpha">
+<ul class="root-level">
+<li class="cate-sel">Getting Started
+<ul>
+ <li><a href="http://docs.rikulo.org/rikulo/latest/Getting_Started/Introduction.html">Introduction</a></li>
+ <li><a class="item-sel">Hello World</a></li>
+ <li><a href="http://docs.rikulo.org/rikulo/latest/Getting_Started/Building_Native_Mobile_Application.html">Building Native Mobile Application</a></li>
+ <li><a href="http://docs.rikulo.org/rikulo/latest/Getting_Started/Architectural_Diagram.html">Architectural Diagram</a></li>
+</ul></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Views/Fundamentals/UI_Overview.html">Views</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Layouts/Fundamentals/Layout_Overview.html">Layouts</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/UXL/Fundamentals/UXL_Overview.html">UXL</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Gestures/Fundamentals.html">Gestures</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Effects/Fundamentals.html">Effects</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/View_Development/Fundamentals.html">View Development</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Rikulo_Gap/Fundamentals.html">Rikulo Gap</a></li>
+<li><a href="http://docs.rikulo.org/rikulo/latest/Web_Services/Fundamentals.html">Web Services</a></li>
+</ul>
+
+</div>
+<div id="controlbar-bottom" class="grid_12 alpha omega clearfix">
+	<div class="control-button"></div>
+</div>
+</div>
+</div>
+   </div> 
+   <script type="text/javascript" src="./resources/doc.js"></script> 
+   <footer id="footer"> 
+    <div id="footer-inner" class="container_12"> 
+     <div id="footer-txt" class="grid_4">
+       Rikulo is a registered trademark of 
+      <a href="http://www.zkoss.org/support/about" target="_blank">Potix Corporation</a>.
+      <br> Copyright © 2012 
+      <a href="http://www.zkoss.org/support/about" target="_blank">Potix Corporation</a>. All rights reserved.
+     </div> 
+     
+     <div id="sns-items" class="grid_4"> 
+      <ul> 
+       <li class="label">Follow us on</li> 
+       <li class="sns-btn googleplus"><a href="https://plus.google.com/u/0/b/117602514255061155793/117602514255061155793" title="Rikulo GooglePlus">@GooglePlus</a></li> 
+       <li class="sns-btn git"><a href="https://github.com/rikulo/rikulo" title="Rikulo Git Repository">Git Repos</a></li> 
+       <li class="sns-btn twitter"><a href="http://twitter.com/RikuloUI" title="Rikulo Twitter">@Twitter</a></li> 
+       <li class="sns-btn facebook"><a href="http://www.facebook.com/rikulo" title="Rikulo Facebook">@Facebook</a></li> 
+       <li class="sns-btn rss"><a href="http://blog.rikulo.org/feeds/all.rss.xml" title="Rikulo Blog RSS">Blog RSS</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </footer> 
+  </div>   
+ 
+</body></html>
