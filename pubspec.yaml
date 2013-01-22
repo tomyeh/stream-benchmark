@@ -1,0 +1,10 @@
+name: Stream_benchmark
+version: 0.5.0
+description: The benchmarking of Stream performance
+authors:
+- Jimmy Shiau <jimmyshiau@zkoss.org>
+- Tom Yeh <tomyeh@rikulo.org>
+homepage: http://rikulo.org
+dependencies:
+  stream: any
+
