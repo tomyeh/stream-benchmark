@@ -4,7 +4,7 @@ It test the performance of loading static resources, including HTML, CSS and JS 
 
 ##Start Stream Server
 
-    cd web
+    #make sure your current directory is under benchmark1
     pub install
     dart web/webapp/main.dart
 
