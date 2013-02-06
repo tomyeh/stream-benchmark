@@ -53,7 +53,7 @@
 </ul>
 <blockquote><p>Please refer to <a href="http://docs.rikulo.org/ui/latest/Getting_Started/Introduction.html">here</a> for installing Rikulo to your application.</p><p>If you prefer to define the user interfaces in a manner similar to authoring HTML/XML pages, please refer to <a href="http://docs.rikulo.org/ui/latest/UXL">Rikulo UXL</a>. It compiles the user interface specified in XML into Dart code.</p>
 </blockquote><h2>The Dart Code</h2><p>Here is a simple "Hello World" application.</p>
-<pre><code>import 'package:rikulo/view.dart';
+<pre><code>import 'package:rikulo_ui/view.dart';
 
 void main() {
   new TextView("Hello World!") //create UI
@@ -61,10 +61,10 @@ void main() {
 }
 </code></pre><p>As shown above, there are basically three steps to implement a Rikulo application.</p>
 <ol>
-  <li>Import the <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library.</li>
+  <li>Import the <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo_ui/view.dart</code></a> library.</li>
   <li>Draw your user interface by instantiating UI elements (<a href="http://api.rikulo.org/ui/latest/rikulo_view/View.html"><code>View</code></a> and subclasses).</li>
   <li>Show your user interface on the browser by invoking <a href="http://api.rikulo.org/ui/latest/rikulo_view/View.html#addToDocument"><code>View.addToDocument()</code></a>.</li>
-</ol><h3>Import the <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library</h3><p>Libraries to import depend on your requirement. The <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo/view.dart</code></a> library is usually what you will import, since it has many UI elements.</p><h3>Draw your user interface</h3><p>The user interface elements in a Rikulo application are built using views. A view is the basic building block. It draws something on the screen and interact with the user.</p><p>A view is an instance of <a href="http://api.rikulo.org/ui/latest/rikulo_view/View.html"><code>View</code></a> and its subclasses. To define the user interface is all about picking up the right views, instantiating them and putting them together.</p><p>For example, we instantiate an instance of <a href="http://api.rikulo.org/ui/latest/rikulo_view/TextView.html"><code>TextView</code></a> to show the greeting message in this sample application.</p>
+</ol><h3>Import the <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo_ui/view.dart</code></a> library</h3><p>Libraries to import depend on your requirement. The <a href="http://api.rikulo.org/ui/latest/rikulo_view.html"><code>package:rikulo_ui/view.dart</code></a> library is usually what you will import, since it has many UI elements.</p><h3>Draw your user interface</h3><p>The user interface elements in a Rikulo application are built using views. A view is the basic building block. It draws something on the screen and interact with the user.</p><p>A view is an instance of <a href="http://api.rikulo.org/ui/latest/rikulo_view/View.html"><code>View</code></a> and its subclasses. To define the user interface is all about picking up the right views, instantiating them and putting them together.</p><p>For example, we instantiate an instance of <a href="http://api.rikulo.org/ui/latest/rikulo_view/TextView.html"><code>TextView</code></a> to show the greeting message in this sample application.</p>
 <pre><code>new TextView("Hello World!");
 </code></pre>
 <blockquote><p><a href="http://api.rikulo.org/ui/latest/rikulo_view/TextView.html"><code>TextView</code></a> is a subclass of <a href="http://api.rikulo.org/ui/latest/rikulo_view/View.html"><code>View</code></a> for displaying messages.</p>
@@ -96,7 +96,7 @@ void main() {
   &lt;head&gt;
     &lt;title&gt;Foo&lt;/title&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
-    &lt;link rel="stylesheet" type="text/css" href="packages/rikulo/resource/css/default/view.css" /&gt;
+    &lt;link rel="stylesheet" type="text/css" href="packages/rikulo_ui/resource/css/default/view.css" /&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;script type="application/dart" src="HelloWorld.dart"&gt;&lt;/script&gt;
@@ -105,9 +105,9 @@ void main() {
 &lt;/html&gt;
 </code></pre><p>First, you have to specify the CSS file to load. Depending on your requirement, you can specify any files you want, as long as including <code>view.css</code> (or a customized version of it).</p>
 <pre><code>&lt;link rel="stylesheet" type="text/css"
- href="packages/rikulo/resource/css/default/view.css" /&gt;
+ href="packages/rikulo_ui/resource/css/default/view.css" /&gt;
 </code></pre>
-<blockquote><p>By default, <a href="http://pub.dartlang.org/doc">the Dart Package Manager</a> installed the resources under the <code>packages/rikulo/resource</code> folder.</p>
+<blockquote><p>By default, <a href="http://pub.dartlang.org/doc">the Dart Package Manager</a> installed the resources under the <code>packages/rikulo_ui/resource</code> folder.</p>
 </blockquote><p>Second, you have to specify your Dart file. In this application, it is called <code>HelloWorld.dart</code>.</p>
 <pre><code>&lt;script type="application/dart" src="HelloWorld.dart"&gt;&lt;/script&gt;
 </code></pre><p>Also notice that Rikulo assumes HTML 5, so you shall specify <code>&lt;!DOCTYPE html&gt;</code> at the beginning. In additions, it is, though optional, suggested to specify the <code>viewpoint</code> meta tag as follows, if you want to run the application on mobile devices:</p>
